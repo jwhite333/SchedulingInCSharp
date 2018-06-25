@@ -1,0 +1,10 @@
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\bin\Debug\SchedulingInCSharp.exe.config
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\bin\Debug\SchedulingInCSharp.exe
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\bin\Debug\SchedulingInCSharp.pdb
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\obj\Debug\SchedulingInCSharp.csprojAssemblyReference.cache
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\obj\Debug\SchedulingInCSharp.Properties.Resources.resources
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\obj\Debug\SchedulingInCSharp.csproj.GenerateResource.cache
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\obj\Debug\SchedulingInCSharp.csproj.CoreCompileInputs.cache
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\obj\Debug\SchedulingInCSharp.exe
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\obj\Debug\SchedulingInCSharp.pdb
+C:\Users\Jonathan\source\repos\SchedulingInCSharp\SchedulingInCSharp\obj\Debug\SchedulingInCSharp.Form1.resources
