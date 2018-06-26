@@ -21,12 +21,12 @@ namespace SchedulingInCSharp.Utils
         public DataGeneration()
         {
             blocks = 4;
-            total_students = 400;
-            courses_requests_allowed = 8;
+            total_students = 20;
+            courses_requests_allowed = 4;
             total_instructors = 25;
             courses_per_instructor = 3;
             semesters = 2;
-            total_courses = 50;
+            total_courses = 8; // courses_per_instructor * total_instructors;
         }
 
         // Create a fake dataset of student course requests
@@ -49,12 +49,12 @@ namespace SchedulingInCSharp.Utils
             {
                 Instructor new_instructor = new Instructor(instructor_id);
 
-                // Add instructor to random courses
-                for (int course_num = 0; course_num < courses_per_instructor; course_num++)
+                // Add instructor to the right amount of courses, ensuring 1 per course
+                /* for (int course_num = 0; course_num < courses_per_instructor; course_num++)
                 {
-                    int random_course = generator.Next(total_courses);
-                    schedule.course_offerings[random_course].instructors.Add(new_instructor);
-                }
+                    int offset = (courses_per_instructor * instructor_id) + course_num;
+                    schedule.course_offerings[offset].instructors.Add(new_instructor);
+                }*/
             }
 
             // Create student requests

@@ -8,11 +8,20 @@ namespace SchedulingInCSharp.DataStructures
 {
     class SortingMatrixElement
     {
-        public List<Student> students;
+        public int size;
+        private List<Student> students;
 
         public SortingMatrixElement()
         {
             students = new List<Student>();
+            size = 0;
+        }
+
+        // Make sure size always changes with student count
+        public void AddStudent(Student student)
+        {
+            students.Add(student);
+            size = students.Count();
         }
     }
 

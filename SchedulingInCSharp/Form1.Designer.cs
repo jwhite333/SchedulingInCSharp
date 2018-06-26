@@ -33,18 +33,18 @@
             // 
             // textBoxSchedule
             // 
-            this.textBoxSchedule.Location = new System.Drawing.Point(12, 12);
+            this.textBoxSchedule.Location = new System.Drawing.Point(3, 2);
             this.textBoxSchedule.Multiline = true;
             this.textBoxSchedule.Name = "textBoxSchedule";
             this.textBoxSchedule.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.textBoxSchedule.Size = new System.Drawing.Size(776, 426);
+            this.textBoxSchedule.Size = new System.Drawing.Size(1372, 1100);
             this.textBoxSchedule.TabIndex = 0;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1377, 1101);
             this.Controls.Add(this.textBoxSchedule);
             this.Name = "Form1";
             this.Text = "Form1";

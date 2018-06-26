@@ -32,10 +32,7 @@ namespace SchedulingInCSharp
             // Give a 20% chance to be an elective
             Random generator = new Random();
             int random_value = generator.Next(100);
-            if (random_value < 20)
-                elective = true;
-            else
-                elective = false;
+            elective = (random_value < 20) ? true : false;
         }
 
         // Allow for sorting of courses by size (Largest first)

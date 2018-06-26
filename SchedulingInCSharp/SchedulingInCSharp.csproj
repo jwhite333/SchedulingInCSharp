@@ -61,7 +61,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataStructures\Schedule.cs" />
-    <Compile Include="Sorting\ScheduleSorter.cs" />
+    <Compile Include="Sorting\Sorter.cs" />
     <Compile Include="Utils\DataGeneration.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -8,12 +8,12 @@ using SchedulingInCSharp.DataStructures;
 namespace SchedulingInCSharp.Sorting
 {
     // Handles the sorting of data
-    class ScheduleSorter
+    class Sorter
     {
         public Schedule schedule;
 
         // Take a reference to the schedule so we don't always need to pass it as an arg
-        public ScheduleSorter(ref Schedule unsorted_schedule)
+        public Sorter(ref Schedule unsorted_schedule)
         {
             schedule = unsorted_schedule;
         }
@@ -67,7 +67,7 @@ namespace SchedulingInCSharp.Sorting
                         course_2_id = student.course_requests[course_2].id;
                         try
                         {
-                            schedule.sorting_matrix.elements[course_1_id][course_2_id].students.Add(student);
+                            schedule.sorting_matrix.elements[course_1_id][course_2_id].AddStudent(student);
                         }
                         catch(System.ArgumentOutOfRangeException)
                         {
@@ -75,6 +75,26 @@ namespace SchedulingInCSharp.Sorting
                             return;
                         }
                     }
+                }
+            }
+        }
+
+        // Run sorting algorithm
+        public void SortClasses(int block_count)
+        {
+            // Preallocate variables to save time
+            int last_element_index, min_conflict_id, iterator, min_value, new_value, min_value_index;
+            ref List<List<SortingMatrixElement>> elements_ref = ref schedule.sorting_matrix.elements;    // Don't want to type that out
+            while (schedule.sorting_matrix.elements.Count() > block_count)
+            {
+                last_element_index = elements_ref.Count();
+                min_value = elements_ref[last_element_index][0].size;
+                for (iterator = 0; iterator < elements_ref[last_element_index].Count(); iterator++)
+                {
+                    new_value = elements_ref[last_element_index][iterator].size;
+
+                    // Adjust min value if all requirements are true
+                    min_value = (new_value < min_value) ? new_value : min_value;
                 }
             }
         }
