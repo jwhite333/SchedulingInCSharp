@@ -8,7 +8,7 @@ using SchedulingInCSharp.DataStructures;
 
 namespace SchedulingInCSharp
 {
-    class Course
+    class Course : IComparable<Course>
     {
         public string name;
         public List<Instructor> instructors;
@@ -16,6 +16,7 @@ namespace SchedulingInCSharp
         public int id;
         public Block preassigned_block;         // Force class to happen at a certain time
         public Semester preassigned_semester;   // Force class to happen during a specific semester
+        public List<Block> restricted_block;    // Force class to happen in a different block
         public bool elective;                   // Happens every other day
 
         public Course(int course_id)
@@ -24,6 +25,7 @@ namespace SchedulingInCSharp
             students = new List<Student>();
             preassigned_block = null;
             preassigned_semester = null;
+            restricted_block = new List<Block>();
             name = "CRSE-" + course_id.ToString();
             id = course_id;
 
@@ -34,6 +36,17 @@ namespace SchedulingInCSharp
                 elective = true;
             else
                 elective = false;
+        }
+
+        // Allow for sorting of courses by size (Largest first)
+        public int CompareTo(Course other)
+        {
+            if (this.students.Count() == other.students.Count())
+                return 0;
+            else if (this.students.Count() < other.students.Count())
+                return 1;
+            else
+                return -1;
         }
     }
 }

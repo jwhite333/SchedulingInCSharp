@@ -39,7 +39,7 @@ namespace SchedulingInCSharp.Utils
             for (int course_id = 0; course_id < total_courses; course_id++)
             {
                 Course new_course = new Course(course_id);
-                schedule.AddCourse(new_course);
+                schedule.AddCourse(ref new_course);
             }
 
             // Generate instructors

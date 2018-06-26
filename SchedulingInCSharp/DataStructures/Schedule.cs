@@ -13,7 +13,8 @@ namespace SchedulingInCSharp
         public int course_count;
         public List<Semester> semesters;
         public List<Student> students;
-        public SortedDictionary<int, Course> course_offerings;
+        public List<Course> course_offerings;
+        public SortingMatrix sorting_matrix;
 
         // Set initial course offerings to nothing
         public Schedule(int semester_count, int block_count)
@@ -25,15 +26,21 @@ namespace SchedulingInCSharp
             }
 
             students = new List<Student>();
-            course_offerings = new SortedDictionary<int, Course>();
+            course_offerings = new List<Course>();
             course_count = 0;
         }
 
         // Add a course to the course offerings
-        public void AddCourse(Course course)
+        public void AddCourse(ref Course course)
         {
-            course_offerings.Add(course_count, course);
+            course_offerings.Add(course);
             course_count++;
+        }
+
+        // Allocate space for the sorting matrix, call after adding all desired classes
+        public void CreateSortingMatrix()
+        {
+            sorting_matrix = new SortingMatrix(course_count);
         }
     }
 }
